@@ -42,6 +42,7 @@
       "originCompetitionName": "AFC Champions League",
       "sport": "football"
     },
+
     {
       "season": 2026,
       "status": "scheduled",
@@ -86,6 +87,7 @@
       "originCompetitionName": "AFC Champions League",
       "sport": "football"
     },
+
     {
       "season": 2026,
       "status": "scheduled",
@@ -130,6 +132,7 @@
       "originCompetitionName": "AFC Champions League",
       "sport": "football"
     },
+
     {
       "season": 2026,
       "status": "scheduled",
@@ -174,6 +177,7 @@
       "originCompetitionName": "AFC Champions League",
       "sport": "football"
     },
+
     {
       "season": 2026,
       "status": "scheduled",
@@ -199,6 +203,202 @@
       "originCompetitionId": "afc-champions-league",
       "originCompetitionName": "AFC Champions League",
       "sport": "football"
+    },
+    {
+      "season": 2026,
+      "status": "scheduled",
+      "timeVenueUTC": "19:00:00",
+      "dateVenue": "2025-12-12",
+      "stadium": null,
+      "homeTeam": {
+        "name": "Los Angeles Lakers",
+        "officialName": "Los Angeles Lakers",
+        "slug": "los-angeles-lakers",
+        "abbreviation": "LAL",
+        "teamCountryCode": "USA",
+        "stagePosition": null
+      },
+      "awayTeam": {
+        "name": "Golden State Warriors",
+        "officialName": "Golden State Warriors",
+        "slug": "golden-state-warriors",
+        "abbreviation": "GSW",
+        "teamCountryCode": "USA",
+        "stagePosition": null
+      },
+      "result": {
+        "homeGoals": 0,
+        "awayGoals": 0,
+        "winner": null,
+        "message": null,
+        "goals": [],
+        "yellowCards": [],
+        "secondYellowCards": [],
+        "directRedCards": []
+      },
+      "stage": {
+        "id": "REGULAR SEASON",
+        "name": "REGULAR SEASON",
+        "ordering": 1
+      },
+      "group": null,
+      "originCompetitionId": "nba",
+      "originCompetitionName": "NBA",
+      "sport": "basketball"
+    },
+
+    {
+      "season": 2026,
+      "status": "played",
+      "timeVenueUTC": "14:00:00",
+      "dateVenue": "2025-10-20",
+      "stadium": null,
+      "homeTeam": {
+        "name": "Roger Federer",
+        "officialName": "Roger Federer",
+        "slug": "roger-federer",
+        "abbreviation": "FED",
+        "teamCountryCode": "SUI",
+        "stagePosition": null
+      },
+      "awayTeam": {
+        "name": "Rafael Nadal",
+        "officialName": "Rafael Nadal",
+        "slug": "rafael-nadal",
+        "abbreviation": "NAD",
+        "teamCountryCode": "ESP",
+        "stagePosition": null
+      },
+      "result": {
+        "homeGoals": 2,
+        "awayGoals": 1,
+        "winner": "Roger Federer",
+        "message": null,
+        "goals": [],
+        "yellowCards": [],
+        "secondYellowCards": [],
+        "directRedCards": []
+      },
+      "stage": {
+        "id": "QUARTERFINALS",
+        "name": "QUARTERFINALS",
+        "ordering": 3
+      },
+      "group": null,
+      "originCompetitionId": "atp-tour",
+      "originCompetitionName": "ATP Tour Finals",
+      "sport": "tennis"
+    },
+
+    {
+      "season": 2026,
+      "status": "scheduled",
+      "timeVenueUTC": "13:00:00",
+      "dateVenue": "2025-09-08",
+      "stadium": null,
+      "homeTeam": {
+        "name": "Ferrari",
+        "officialName": "Scuderia Ferrari",
+        "slug": "ferrari",
+        "abbreviation": "FER",
+        "teamCountryCode": "ITA",
+        "stagePosition": null
+      },
+      "awayTeam": {
+        "name": "Red Bull Racing",
+        "officialName": "Red Bull Racing",
+        "slug": "red-bull-racing",
+        "abbreviation": "RBR",
+        "teamCountryCode": "AUT",
+        "stagePosition": null
+      },
+      "result": null,
+      "stage": {
+        "id": "RACE",
+        "name": "RACE",
+        "ordering": 1
+      },
+      "group": null,
+      "originCompetitionId": "formula-1",
+      "originCompetitionName": "Formula 1 Championship",
+      "sport": "formula 1"
+    },
+
+    {
+      "season": 2026,
+      "status": "played",
+      "timeVenueUTC": "20:30:00",
+      "dateVenue": "2025-08-18",
+      "stadium": null,
+      "homeTeam": {
+        "name": "Manchester United",
+        "officialName": "Manchester United FC",
+        "slug": "manchester-united",
+        "abbreviation": "MUN",
+        "teamCountryCode": "ENG",
+        "stagePosition": null
+      },
+      "awayTeam": {
+        "name": "Chelsea",
+        "officialName": "Chelsea FC",
+        "slug": "chelsea-fc",
+        "abbreviation": "CHE",
+        "teamCountryCode": "ENG",
+        "stagePosition": null
+      },
+      "result": {
+        "homeGoals": 3,
+        "awayGoals": 2,
+        "winner": "Manchester United",
+        "message": null,
+        "goals": [],
+        "yellowCards": [],
+        "secondYellowCards": [],
+        "directRedCards": []
+      },
+      "stage": {
+        "id": "MATCHDAY 1",
+        "name": "MATCHDAY 1",
+        "ordering": 1
+      },
+      "group": null,
+      "originCompetitionId": "premier-league",
+      "originCompetitionName": "Premier League",
+      "sport": "football"
+    },
+
+    {
+      "season": 2026,
+      "status": "scheduled",
+      "timeVenueUTC": "18:10:00",
+      "dateVenue": "2025-12-25",
+      "stadium": null,
+      "homeTeam": {
+        "name": "Real Madrid",
+        "officialName": "Real Madrid Baloncesto",
+        "slug": "real-madrid-basketball",
+        "abbreviation": "RMB",
+        "teamCountryCode": "ESP",
+        "stagePosition": null
+      },
+      "awayTeam": {
+        "name": "FC Barcelona",
+        "officialName": "FC Barcelona Basket",
+        "slug": "fc-barcelona-basket",
+        "abbreviation": "FCB",
+        "teamCountryCode": "ESP",
+        "stagePosition": null
+      },
+      "result": null,
+      "stage": {
+        "id": "EUROLEAGUE",
+        "name": "EUROLEAGUE",
+        "ordering": 1
+      },
+      "group": null,
+      "originCompetitionId": "euroleague",
+      "originCompetitionName": "EuroLeague",
+      "sport": "basketball"
     }
   ]
 }

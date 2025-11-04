@@ -16,7 +16,6 @@ const eventsSlice = createSlice({
   },
 });
 
-export const eventInfoSelector = (state) => state.events.events;
-export const filteredEventsSelector = (state) => state.events.filtered.data;
+export const filteredEventsSelector = (state) => state.events.filtered;
 export const { filterBySport } = eventsSlice.actions;
 export default eventsSlice.reducer;
