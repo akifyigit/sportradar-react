@@ -34,8 +34,14 @@ const Dashboard = () => {
 
   const monthGrid = getMonthGrid(year, month);
 
+  // matching the events with a new created unique id
+  const eventsWithId = events.data.map((ev, idx) => ({
+    ...ev,
+    id: `${ev.originCompetitionId}-${ev.stage.id}-${ev.homeTeam?.slug}-${ev.awayTeam?.slug}-${ev.dateVenue}-${idx}`,
+  }));
+
   const eventMap = {};
-  events.data.forEach((e) => {
+  eventsWithId.forEach((e) => {
     const key = e.dateVenue;
     if (!eventMap[key]) eventMap[key] = [];
     eventMap[key].push(e);
@@ -70,7 +76,6 @@ const Dashboard = () => {
     <main className="p-6">
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-bold">{monthLabel}</h1>
-
         <div className="flex gap-2">
           <button
             type="button"
@@ -106,8 +111,8 @@ const Dashboard = () => {
           return (
             <div
               key={idx}
-              className={`p-2 min-h-[120px] border border-gray-200 bg-white ${
-                isCurrentMonth ? "" : "bg-gray-100 text-gray-400"
+              className={`p-2 min-h-[120px] border border-gray-200 ${
+                isCurrentMonth ? "bg-white" : "bg-gray-100 text-gray-400"
               }`}
             >
               <div className="text-sm font-medium mb-2">{date.getDate()}</div>

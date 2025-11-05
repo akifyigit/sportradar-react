@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const sportColors = {
   football: "bg-blue-100 text-blue-800",
@@ -9,11 +10,14 @@ const sportColors = {
 };
 
 const EventCard = ({ event }) => {
+  const navigate = useNavigate();
   const sportKey = (event.sport || "").toLowerCase();
   const colorClass = sportColors[sportKey] || sportColors.default;
+
   return (
     <div
       className={`rounded px-2 py-1 text-xs font-medium cursor-pointer ${colorClass}`}
+      onClick={() => navigate(`/event/${event.id}`)}
     >
       <div className="truncate font-medium">
         {event.homeTeam?.name} vs {event.awayTeam?.name}
