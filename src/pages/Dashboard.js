@@ -11,7 +11,7 @@ const getMonthGrid = (year, month) => {
 
   const grid = [];
 
-  for (let i = 0; i < 35; i++) {
+  for (let i = 0; i < 42; i++) {
     const dayOffset = i - startDay + 1;
 
     if (dayOffset <= 0) {
@@ -70,8 +70,6 @@ const Dashboard = () => {
     year: "numeric",
   });
 
-  const days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
-
   return (
     <main className="p-6">
       <div className="flex items-center justify-between mb-6">
@@ -94,16 +92,10 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-7 gap-px border border-gray-200">
-        {days.map((d) => (
-          <div
-            key={d}
-            className="p-2 text-center text-xs font-semibold bg-white border-b"
-          >
-            {d}
-          </div>
-        ))}
-
+      <div
+        className="grid gap-px border border-gray-200 
+    grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-7"
+      >
         {monthGrid.map((date, idx) => {
           const key = date.toISOString().slice(0, 10);
           const isCurrentMonth = date.getMonth() === month;

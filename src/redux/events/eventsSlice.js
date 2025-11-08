@@ -1,21 +1,32 @@
 import { createSlice } from "@reduxjs/toolkit";
-import data from "../../data/sportsData.json";
+import rawData from "../../data/sportsData.json";
+const eventsJson = rawData.data;
+
+const savedUserEvents = JSON.parse(localStorage.getItem("userEvents")) || [];
+
+const initialState = {
+  data: [...eventsJson, ...savedUserEvents],
+};
 
 const eventsSlice = createSlice({
   name: "events",
-  initialState: {
-    events: data,
-    filtered: data,
-  },
+  initialState,
   reducers: {
-    filterBySport: (state, action) => {
-      state.filtered = state.events.filter(
-        (event) => event.sport === action.payload
+    addEvent: (state, action) => {
+      const newEvent = action.payload;
+
+      state.data.push(newEvent);
+
+      const userEventsOnly = state.data.filter(
+        (ev) => ev.createdByUser === true
       );
+      localStorage.setItem("userEvents", JSON.stringify(userEventsOnly));
     },
   },
 });
 
-export const filteredEventsSelector = (state) => state.events.filtered;
-export const { filterBySport } = eventsSlice.actions;
+export const { addEvent } = eventsSlice.actions;
+
+export const filteredEventsSelector = (state) => state.events;
+
 export default eventsSlice.reducer;

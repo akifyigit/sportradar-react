@@ -1,15 +1,19 @@
 import Sidebar from "../Sidebar";
-// import TopBar from "../topbar/TopBar";
+import TopBar from "../TopBar";
 
 const Layout = ({ children }) => {
   return (
-    <div className="flex h-screen w-full">
+    <div className="flex h-screen overflow-hidden">
+      {/* Sidebar */}
       <Sidebar />
 
-      <div className="flex flex-col flex-1">
-        {/* <TopBar /> */}
+      {/* Main content area */}
+      <div className="flex-1 flex flex-col">
+        {/* TopBar */}
+        <TopBar />
 
-        <main className="flex-1 overflow-auto p-6 bg-gray-50">{children}</main>
+        {/* Page content */}
+        <main className="flex-1 overflow-auto p-4 md:p-6 ">{children}</main>
       </div>
     </div>
   );
