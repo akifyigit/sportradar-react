@@ -1,0 +1,18 @@
+In this project, I used AI as a support tool to help me when I encountered challenges or needed clarification.
+The way I use AI is very similar to how I used to rely on Google, documentation websites, and Stack Overflow.
+Instead of manually searching through multiple pages, AI helped by summarizing information quickly and pointing me in the right direction.
+It did not replace my work, but it helped me work more efficiently.
+One of the main benefits I experienced was faster debugging.
+During the process of building components and writing tests, I encountered issues that would normally take long web searches to resolve.
+By asking AI about a test failure or an unexpected React behavior, I was able to understand the root cause more quickly.
+Even when the suggestions were not directly applicable, they helped me think about the problem in a different way.
+AI also helped me stay up to date with current practices. Web development changes rapidly, and tools like React, React Router, and Testing Library often introduce new patterns.
+I used AI to confirm whether certain patterns were still recommended or if newer approaches existed.
+This allowed me to avoid outdated methods and ensured that the project stayed aligned with modern standards.
+However, AI did not write the entire solution for me.
+I structured the project, wrote the components, implemented the logic, designed the pages, and handled the state management myself.
+When AI generated a suggestion, I evaluated it like any other external source; sometimes I used it, sometimes I modified it, and sometimes I discarded it. 
+This was important to ensure that I fully understood the code and that it met the project requirements.
+Overall, my use of AI was similar to using a very fast, interactive documentation assistant. It supported learning, improved my workflow, and reduced repetitive searching. 
+But the responsibility for writing, understanding, and validating the final project remained entirely mine. 
+I see AI as an extension of the developer toolbox. Useful, efficient, but not a replacement for my own reasoning or coding skills.
