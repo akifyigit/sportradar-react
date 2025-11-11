@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { filteredEventsSelector } from "../redux/events/eventsSlice";
+import generateEventId from "../utils/generateEventId";
 
 const EventDetails = () => {
   const navigate = useNavigate();
@@ -9,10 +10,7 @@ const EventDetails = () => {
   const events = useSelector(filteredEventsSelector);
 
   const event = events.data
-    .map((ev, idx) => ({
-      ...ev,
-      id: `${ev.originCompetitionId}-${ev.stage.id}-${ev.homeTeam?.slug}-${ev.awayTeam?.slug}-${ev.dateVenue}-${idx}`,
-    }))
+    .map((ev, idx) => ({ ...ev, id: generateEventId(ev, idx) }))
     .find((ev) => ev.id === id);
 
   if (!event) return <div className="p-6">Event not found</div>;
@@ -21,11 +19,7 @@ const EventDetails = () => {
     <main className="flex-1 p-4 sm:p-6 lg:p-8">
       <div className="mx-auto w-full max-w-4xl flex flex-col gap-6">
         <div className="flex flex-wrap items-center gap-2 text-sm text-gray-500">
-          <a
-            onClick={() => navigate(`/`)}
-            href="#"
-            className="hover:text-blue-600"
-          >
+          <a onClick={() => navigate(`/`)} className="hover:text-blue-600">
             Dashboard
           </a>
           <span>/</span>

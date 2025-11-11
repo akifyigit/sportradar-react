@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import EventCard from "../components/EventCard";
 import { filteredEventsSelector } from "../redux/events/eventsSlice";
+import generateEventId from "../utils/generateEventId";
 
 const getMonthGrid = (year, month) => {
   const first = new Date(year, month, 1);
@@ -11,7 +12,7 @@ const getMonthGrid = (year, month) => {
 
   const grid = [];
 
-  for (let i = 0; i < 42; i++) {
+  for (let i = 0; i < 35; i++) {
     const dayOffset = i - startDay + 1;
 
     if (dayOffset <= 0) {
@@ -37,7 +38,7 @@ const Dashboard = () => {
   // matching the events with a new created unique id
   const eventsWithId = events.data.map((ev, idx) => ({
     ...ev,
-    id: `${ev.originCompetitionId}-${ev.stage.id}-${ev.homeTeam?.slug}-${ev.awayTeam?.slug}-${ev.dateVenue}-${idx}`,
+    id: generateEventId(ev, idx),
   }));
 
   const eventMap = {};

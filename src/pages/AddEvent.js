@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addEvent } from "../redux/events/eventsSlice";
 import { useNavigate } from "react-router-dom";
+import generateEventId from "../utils/generateEventId";
 
 // basit slugify
 const slugify = (text) =>
@@ -30,10 +31,11 @@ export default function AddEvent() {
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [location, setLocation] = useState("");
+  const [competitionName, setCompetitionName] = useState("");
   const [broadcast, setBroadcast] = useState("");
   const [homeCountry, setHomeCountry] = useState("");
   const [awayCountry, setAwayCountry] = useState("");
-  const [stage, setStage] = useState("GROUP_STAGE");
+  const [stage, setStage] = useState("");
   const [errors, setErrors] = useState({});
 
   const handleSubmit = (e) => {
@@ -88,13 +90,13 @@ export default function AddEvent() {
       result: null,
       group: null,
       originCompetitionId: "user-events",
-      originCompetitionName: "User Added Event",
+      originCompetitionName: competitionName || "Custom Competition",
       sport: slugify(sport),
       createdByUser: true,
     };
 
-    // ID oluştur
-    newEvent.id = `${newEvent.originCompetitionId}-${newEvent.stage.id}-${newEvent.homeTeam.slug}-${newEvent.awayTeam.slug}-${newEvent.dateVenue}`;
+    // ID create
+    newEvent.id = generateEventId(newEvent);
 
     dispatch(addEvent(newEvent));
     navigate("/"); // redirect
@@ -193,22 +195,37 @@ export default function AddEvent() {
                 )}
               </label>
             </div>
-
-            {/* Location */}
-            <div>
-              <label className="flex flex-col">
-                <p className="text-gray-800 text-sm font-medium pb-2">
-                  Location
-                </p>
-                <input
-                  className="form-input w-full rounded-lg border px-4 py-2 text-gray-900"
-                  placeholder="Location / Stadium"
-                  value={location}
-                  onChange={(e) => setLocation(e.target.value)}
-                />
-              </label>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Location */}
+              <div>
+                <label className="flex flex-col">
+                  <p className="text-gray-800 text-sm font-medium pb-2">
+                    Location
+                  </p>
+                  <input
+                    className="form-input w-full rounded-lg border px-4 py-2 text-gray-900"
+                    placeholder="Location / Stadium"
+                    value={location}
+                    onChange={(e) => setLocation(e.target.value)}
+                  />
+                </label>
+              </div>
+              {/* Competition Name */}
+              <div>
+                <label className="flex flex-col">
+                  <p className="text-gray-800 text-sm font-medium pb-2">
+                    Competition Name
+                  </p>
+                  <input
+                    className="form-input w-full rounded-lg border px-4 py-2 text-gray-900"
+                    placeholder="EuroLeague, Bundesliga, NBA, etc."
+                    value={competitionName}
+                    onChange={(e) => setCompetitionName(e.target.value)}
+                    required
+                  />
+                </label>
+              </div>
             </div>
-
             {/* Broadcast, Stage, Home/Away Country */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <label className="flex flex-col">
@@ -227,6 +244,7 @@ export default function AddEvent() {
                 <p className="text-gray-800 text-sm font-medium pb-2">Stage</p>
                 <input
                   className="form-input w-full rounded-lg border px-4 py-2 text-gray-900"
+                  placeholder="e.g., Friendly, League Game etc."
                   value={stage}
                   onChange={(e) => setStage(e.target.value)}
                 />

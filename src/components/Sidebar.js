@@ -9,7 +9,7 @@ export default function Sidebar() {
     <>
       {/* Hamburger button for mobile */}
       <button
-        className="md:hidden fixed top-2/4 left-4 z-50 p-3 bg-white rounded-full shadow-lg"
+        className="md:hidden fixed top-2/4 left-4 z-25 p-3 bg-white rounded-full shadow-lg"
         onClick={() => setIsOpen(true)}
       >
         <i className="fa-solid fa-bars"></i>
@@ -25,7 +25,7 @@ export default function Sidebar() {
         `}
       >
         <div className="flex items-center gap-3 text-[#0d121b]">
-          <h2 className="text-xl font-bold tracking-tight">SportTrackr</h2>
+          <h2 className="text-xl font-bold tracking-tight">Sport Tracker</h2>
         </div>
 
         {/* Close button for mobile */}
@@ -43,10 +43,10 @@ export default function Sidebar() {
               navigate("/");
               setIsOpen(false);
             }}
-            className="flex items-center gap-2 px-3 py-2 rounded hover:bg-gray-100 text-gray-700 font-medium"
+            className="flex items-center gap-2 px-3 py-2 border-2 rounded-lg hover:bg-gray-100 text-gray-700 font-medium"
           >
             <i className="fa-solid fa-grip"></i>
-            <span className="hidden md:inline">Dashboard</span>
+            <span className="  md:inline">Dashboard</span>
           </button>
 
           <button
@@ -54,10 +54,10 @@ export default function Sidebar() {
               navigate("/add-event");
               setIsOpen(false);
             }}
-            className="flex items-center gap-2 px-3 py-2 rounded hover:bg-gray-100 text-gray-700 font-medium"
+            className="flex items-center gap-2 px-3 py-2 border-2 rounded-lg hover:bg-gray-100 text-gray-700 font-medium"
           >
             <i className="fa-solid fa-plus"></i>
-            <span className="hidden md:inline">Add Event</span>
+            <span className=" md:inline">Add Event</span>
           </button>
         </div>
       </div>

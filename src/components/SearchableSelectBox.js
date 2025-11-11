@@ -8,7 +8,7 @@ const SearchableSelectBox = forwardRef(
       value = "",
       onChange = () => {},
       onSelect = () => {},
-      placeholder = "Search",
+      placeholder = "",
     },
     ref
   ) => {
@@ -49,10 +49,10 @@ const SearchableSelectBox = forwardRef(
       return (
         item.homeTeam?.name.toLowerCase().includes(searchText) ||
         item.awayTeam?.name.toLowerCase().includes(searchText) ||
-        item.sport.toLowerCase().includes(searchText)
+        (item.sport ?? "").toLowerCase().includes(searchText)
       );
     });
-
+    console.log(items);
     return (
       <div ref={selectWrapperRef} className="w-full relative">
         <input
