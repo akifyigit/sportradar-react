@@ -1,11 +1,12 @@
-````markdown
+
+
 # Sportradar Frontend Coding Exercise – Sports Event Calendar
 
 ## Overview
 This project is a sports event calendar application built for the Sportradar Frontend Coding Exercise.  
-It allows users to view sports events on a calendar, see event details, and add new events during runtime.  
+It allows users to view sports events on a calendar, see event details, and add new events during runtime.
 
----------------------------------------------------------------------------------------------
+---
 
 ## Features
 - **Calendar View:** Displays current month with events marked on the corresponding days.
@@ -15,15 +16,16 @@ It allows users to view sports events on a calendar, see event details, and add 
 - **Event ID Generator:** Helper function to create unique event IDs for each event.
 - **Navigation:** Simple navigation between calendar and add event page.
 
----------------------------------------------------------------------------
+---
 
 ## Installation
 
 1. Clone the repository:
-   ```
-   git clone <your-repo-url>
+```bash
+   git clone https://github.com/akifyigit/sportradar-react.git
    cd sportradarreactapp
-````
+```
+
 
 2. Install dependencies:
 
@@ -63,23 +65,7 @@ npm test
 
 ---
 
-## Assumptions & Notes
 
-* Persistent storage is not implemented; all new events exist only during the current session.
-* The layout uses TailwindCSS for styling.
-* SearchableSelectBox tests are skipped temporarily to allow other tests to pass.
-* Event data can be easily adapted from a mock JSON file provided.
-
----
-
-## Future Improvements
-
-* Add persistent storage (localStorage or backend API) for events.
-* Fully implement `SearchableSelectBox` tests.
-* Add filters for events (by sport type, date, etc.).
-* Enhance styling and animations for better user experience.
-
----
 
 ## Tech Stack
 
@@ -88,7 +74,5 @@ npm test
 * React Router v6
 * Jest & React Testing Library
 * JavaScript (ES6+)
-
-
 
 
