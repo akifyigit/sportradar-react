@@ -20,7 +20,7 @@ It allows users to view sports events on a calendar, see event details, and add 
 ## Installation
 
 1. Clone the repository:
-   ```bash
+   ```
    git clone <your-repo-url>
    cd sportradarreactapp
 ````
@@ -89,6 +89,6 @@ npm test
 * Jest & React Testing Library
 * JavaScript (ES6+)
 
-```
+
 
 
