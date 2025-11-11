@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+````markdown
+# Sportradar Frontend Coding Exercise – Sports Event Calendar
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+This project is a sports event calendar application built for the Sportradar Frontend Coding Exercise.  
+It allows users to view sports events on a calendar, see event details, and add new events during runtime.  
 
-## Available Scripts
+---------------------------------------------------------------------------------------------
 
-In the project directory, you can run:
+## Features
+- **Calendar View:** Displays current month with events marked on the corresponding days.
+- **Event Detail Page:** Clicking an event shows full details, including teams, sport type, date, and time.
+- **Add Event Form:** Users can add new events at runtime.
+- **Responsive Design:** Works well on desktop, tablet, and mobile screens.
+- **Event ID Generator:** Helper function to create unique event IDs for each event.
+- **Navigation:** Simple navigation between calendar and add event page.
 
-### `npm start`
+---------------------------------------------------------------------------
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone the repository:
+   ```bash
+   git clone <your-repo-url>
+   cd sportradarreactapp
+````
 
-### `npm test`
+2. Install dependencies:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```bash
+   npm install
+   ```
 
-### `npm run build`
+3. Start the development server:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   npm start
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Usage
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* Navigate the calendar to see scheduled events.
+* Click on an event to view details.
+* Add a new event using the "Add Event" page.
+  Note: Added events are not persisted across sessions.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Tests
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Run all tests with:
 
-## Learn More
+```bash
+npm test
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Most tests pass, except `SearchableSelectBox` tests which are skipped due to placeholder/prop mismatch issues.
+* Jest and React Testing Library were used for testing components and helper functions.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## Assumptions & Notes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* Persistent storage is not implemented; all new events exist only during the current session.
+* The layout uses TailwindCSS for styling.
+* SearchableSelectBox tests are skipped temporarily to allow other tests to pass.
+* Event data can be easily adapted from a mock JSON file provided.
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Future Improvements
 
-### Making a Progressive Web App
+* Add persistent storage (localStorage or backend API) for events.
+* Fully implement `SearchableSelectBox` tests.
+* Add filters for events (by sport type, date, etc.).
+* Enhance styling and animations for better user experience.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## Tech Stack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* React 18
+* TailwindCSS
+* React Router v6
+* Jest & React Testing Library
+* JavaScript (ES6+)
 
-### Deployment
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
